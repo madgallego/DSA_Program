@@ -1,0 +1,26 @@
+program flow
+
+Main Screen:
+1) linear ds
+2) non linear ds
+3) strings
+4) sorting
+5) searching
+6) quit
+
+
+Linear DS
+1) arrays
+1) linked list
+2) stacks
+3) queus
+4) exit
+
+Arrays
+1) traverse
+2) insert
+3) delete
+4) search
+5) sort
+6) Modify
+7) exit
