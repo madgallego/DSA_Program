@@ -2,6 +2,8 @@
 PROGRAMMING EXERCISE
 DSA PROJECT PROGRESS REPORT: Day 1 - 11/18/2024
 
+Working Array Function
+
 Working Search Function
 - Linear Search
 - Binary Search
@@ -13,13 +15,29 @@ Working Search Function
 #include <stdio.h>
 #define MAX 100
 
+void arrMaker(int *arr, int size){
+    int temp;
+    //gets the user input for the array
+    for(int i=0;i<size;i++){
+        printf("Array Value #%d: ", i+1);
+        scanf("%d", &temp);
+        *(arr+i)=temp;
+    }    
+}
+
+void arrPrinter(int *arr, int size){
+    printf("Array Content: ");
+    for(int i=0;i<size;i++){
+        printf("%d ", arr[i]);
+        
+    }
+    printf("\n");
+}
+
 int Searching(){
     int arrSize;
     int arr[MAX]= {0};
-    printf("\nEnter array size: ");
     
-
-    printf("\n1)Linear Search 2) Binary Search\n3)Exit\n\n Please Choose:");
 
 }
 
@@ -59,8 +77,18 @@ void main (){
                 printf("\nWIP\n");
                 ///procedure
             break;
-        case 5: printf("\nSearching\n");
-                ///procedure
+
+        case 5: //Searching
+                int arr[MAX]={0};
+                int size;
+                printf("Let's Create first an array\n");
+                printf("What is the size of the array? ");
+                scanf("%d", &size);
+                arrMaker(arr, size);
+
+
+
+                
             break;
         case 6:printf("\nQuit\n");
                userQuit=1;
