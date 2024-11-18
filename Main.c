@@ -14,7 +14,7 @@ void main (){
 
     //Main Menu Screen
     printf("\nDATA STRUCTURES AND ALGORITHMS\n");
-    printf("1) Linear Data Structure\n2) Non-Linear Data Structure\n3) Strings\n4) Sorting\n5) Searching\n6) Quit\n");`
+    printf("1) Linear Data Structure\n2) Non-Linear Data Structure\n3) Strings\n4) Sorting\n5) Searching\n6) Quit\n");
     while
 
 
