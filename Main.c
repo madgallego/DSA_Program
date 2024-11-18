@@ -15,6 +15,7 @@ Working Search Function
 #include <stdio.h>
 #define MAX 100
 
+//function that creates an array, pass by reference
 void arrMaker(int *arr, int size){
     int temp;
     //gets the user input for the array
@@ -25,6 +26,7 @@ void arrMaker(int *arr, int size){
     }    
 }
 
+//function that prints an array, pass by reference
 void arrPrinter(int *arr, int size){
     printf("Array Content: ");
     for(int i=0;i<size;i++){
@@ -34,12 +36,68 @@ void arrPrinter(int *arr, int size){
     printf("\n");
 }
 
-int Searching(){
-    int arrSize;
-    int arr[MAX]= {0};
-    
+int linearSearch(int *arr, int size, int key){
 
+    for (int i = 0; i < size; i++)
+        if (arr[i] == key)
+            return i;
+    return -1;
 }
+
+int binarySearch(int *arr, int low, int high, int key){
+while (low <= high) {
+        int mid = low + (high - low)/2;
+
+        if (arr[mid] == key)
+            return mid;
+
+        if (arr[mid] < key)
+            low = mid + 1;
+
+        else
+            high = mid - 1;
+    }
+
+    return -1;
+}
+
+void Searching(int *arr, int size){
+    int choice;
+    int key;
+    int position;
+
+    printf("1) Linear Search\n2) Bianry Search\n3)Exit\n");
+    printf("\nPlease choose: ");
+    scanf("%d", &choice);
+
+    switch (choice)
+    {
+    case 1: //Linear
+        printf("\nKey Value to be searched: ");
+        scanf("%d", &key);
+        position = linearSearch(arr, size, key);
+        if (position<0)
+            printf("Value not found!");
+        else printf("Value %d is at index %d\n\n", key, position);
+        break;
+
+    case 2: //Binary
+        printf("\nKey Value to be searched: ");
+        scanf("%d", &key);
+        position = binarySearch(arr, 0,  size-1, key);
+        if (position<0)
+            printf("Value not found!");
+        else printf("Value %d is at index %d\n\n", key, position);
+        break;
+    case 3: //Exit
+        break;
+    default:
+        break;
+    }
+    
+}
+
+
 
 void main (){
     int choice;
@@ -81,10 +139,15 @@ void main (){
         case 5: //Searching
                 int arr[MAX]={0};
                 int size;
-                printf("Let's Create first an array\n");
+                printf("Let's first create an array\n");
                 printf("What is the size of the array? ");
                 scanf("%d", &size);
-                arrMaker(arr, size);
+
+                arrMaker(arr, size);//calls to create an array
+
+                printf("\n\nSEARCHING ALGORITHM\n"); //header
+                arrPrinter(arr, size);//calls to print the content of the array
+                Searching(arr, size);
 
 
 
