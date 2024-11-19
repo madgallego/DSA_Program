@@ -1,13 +1,16 @@
 /*
+GALLEGO, MHARC ALEX D. - BSCS 2A
+
 PROGRAMMING EXERCISE
-DSA PROJECT PROGRESS REPORT: Day 1 - 11/18/2024
+DSA PROJECT PROGRESS REPORT: Day 2 - 11/19/2024
 
-Working Array Function
+What's new?
+1) Working Linear Data Structure Selection
+- Array Selection working
 
-Working Search Function
-- Linear Search
-- Binary Search
-
+2) Array Function
+- working array traverse method
+- working array search method
 
 */
 
@@ -235,7 +238,7 @@ void Searching(int *arr, int size){
     int key;
     int position;
 
-    printf("1) Linear Search\n2) Bianry Search\n3)Exit\n");
+    printf("1) Linear Search\n2) Bianry Search\n3) Exit\n");
     printf("\nPlease choose: ");
     scanf("%d", &choice);
 
