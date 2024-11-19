@@ -36,24 +36,71 @@ void arrPrinter(int *arr, int size){
     printf("\n");
 }
 
-//FOR CASE 1
 
-void linearDataStrcuture (){
+
+
+//FOR CASE 1 Linear Data Structure
+void Arrays(){
+    int arr[MAX]={0};
+    int size;
+    int choice;
+    int key;
+    printf("Let's first create an array\n");
+    printf("What is the size of the array? ");
+    scanf("%d", &size);
+
+    arrMaker(arr, size);
+    
+    printf("\n\nARRAYS\n");
+    printf("\n1) Traverse\n2) Insert\n3) Delete\n4) Search\n5) Sort\n6) Merge\n7) Exit\n\nPlease choose: ");
+    scanf("%d", choice);
+
+    switch (choice)
+    {
+    case 1: //traverse
+            arrPrinter(arr, size);
+        break;
+    case 2:
+        /* code */
+        break;
+    case 3:
+        /* code */
+        break;
+    case 4:
+        /* code */
+        break;
+    case 5:
+        /* code */
+        break;
+    case 6:
+        /* code */
+        break;
+    case 7: //exit
+        break;
+    
+    default:
+        break;
+    }
+
+}
+
+void LinearDataStructure (){
     int choice;
     printf("\n1) Arrays\n2) Linked list\n3) Stacks\n4) Queus\n5) Exit\n\nPLease Choose: ");
     scanf("%d", &choice);
 
     switch (choice)
     {
-    case 1:
+    case 1: //arrays
         break;
-    case 1:
+    case 2: //linked list
         break;
-    case 1:
+    case 3://stacks
         break;
-    case 1:
+    case 4: //queues
         break;
-    
+    case 5: //exit
+        break;
     default:
         break;
     }
@@ -67,7 +114,7 @@ void linearDataStrcuture (){
 
 
 
-//FOR CASE 5
+//FOR CASE 5 Searching
 int linearSearch(int *arr, int size, int key){
 
     for (int i = 0; i < size; i++)
@@ -148,7 +195,8 @@ void main (){
 
         switch (choice){
         case 1: printf("\nLinear Data Structures\n");
-                
+                LinearDataStructure();
+
                 ///procedure
 
             break;
@@ -166,14 +214,6 @@ void main (){
         
         //Sorting
         case 4: 
-                int arr[MAX]={0};
-                int size;
-                printf("Let's first create an array\n");
-                printf("What is the size of the array? ");
-                scanf("%d", &size);
-
-                arrMaker(arr, size);//calls to create an array
-                
 
 
 
