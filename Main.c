@@ -36,6 +36,38 @@ void arrPrinter(int *arr, int size){
     printf("\n");
 }
 
+//FOR CASE 1
+
+void linearDataStrcuture (){
+    int choice;
+    printf("\n1) Arrays\n2) Linked list\n3) Stacks\n4) Queus\n5) Exit\n\nPLease Choose: ");
+    scanf("%d", &choice);
+
+    switch (choice)
+    {
+    case 1:
+        break;
+    case 1:
+        break;
+    case 1:
+        break;
+    case 1:
+        break;
+    
+    default:
+        break;
+    }
+
+
+
+
+
+}
+
+
+
+
+//FOR CASE 5
 int linearSearch(int *arr, int size, int key){
 
     for (int i = 0; i < size; i++)
@@ -116,7 +148,7 @@ void main (){
 
         switch (choice){
         case 1: printf("\nLinear Data Structures\n");
-                printf("\nWIP\n");
+                
                 ///procedure
 
             break;
@@ -130,13 +162,29 @@ void main (){
                 printf("\nWIP\n");
                 ///procedure
             break;
+        
+        
+        //Sorting
+        case 4: 
+                int arr[MAX]={0};
+                int size;
+                printf("Let's first create an array\n");
+                printf("What is the size of the array? ");
+                scanf("%d", &size);
 
-        case 4: printf("\nSorting\n");
-                printf("\nWIP\n");
+                arrMaker(arr, size);//calls to create an array
+                
+
+
+
+
+
                 ///procedure
             break;
 
-        case 5: //Searching
+
+        //Searching
+        case 5: 
                 int arr[MAX]={0};
                 int size;
                 printf("Let's first create an array\n");
