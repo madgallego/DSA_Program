@@ -52,7 +52,7 @@ void Arrays(){
     arrMaker(arr, size);
     
     printf("\n\nARRAYS\n");
-    printf("\n1) Traverse\n2) Insert\n3) Delete\n4) Search\n5) Sort\n6) Merge\n7) Exit\n\nPlease choose: ");
+    printf("\n1) Traverse\n2) Search\n3) Insert\n4) Delete\n5) Sort\n6) Merge\n7) Exit\n\nPlease choose: ");
     scanf("%d", choice);
 
     switch (choice)
@@ -60,10 +60,10 @@ void Arrays(){
     case 1: //traverse
             arrPrinter(arr, size);
         break;
-    case 2:
+    case 2: //Insert
         /* code */
         break;
-    case 3:
+    case 3:// Delete
         /* code */
         break;
     case 4:
@@ -92,6 +92,7 @@ void LinearDataStructure (){
     switch (choice)
     {
     case 1: //arrays
+        Arrays();
         break;
     case 2: //linked list
         break;
