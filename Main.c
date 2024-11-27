@@ -26,6 +26,10 @@ void arrPrinter(int *arr, int size);
 //case1
 void Arrays ();
 void LinearDataStructure();
+//case4
+void selectionSort(int arr [],int len);
+void bubbleSort (int arr [],int len);
+void Sorting (int *arr, int size);
 
 //case 5 
 int linearSearch(int *arr, int size, int key);
@@ -107,6 +111,8 @@ void main (){
 
 
 }//main
+
+
 
 //function that creates an array, pass by reference
 void arrMaker(int *arr, int size){
@@ -203,6 +209,68 @@ void LinearDataStructure (){
 
 
 
+
+}
+
+
+
+//FOR CASE 4 Sorting
+void selectionSort(int arr [],int len){
+    int min;//stores index of current minimum value int the array
+    int temp;//stores value temorarily for swapping
+
+    for(int i=0; i<len-1;i++){
+        min=i; //assuminmg that the current index is the smallest, it is set as the minimim
+
+        //compares the current minimum to the rest of the array to find the next smallest
+        for(int j=i+1; j<len; j++){
+            if(arr[min]>arr[j])
+                min=j;
+            
+        }
+
+        //gets the final evaluated minimum then swap the value to its sorted position
+        if(min!=i){
+            temp=arr[i];
+            arr[i]=arr[min];
+            arr[min]=temp;
+        }
+
+    }
+}//selection sort
+
+void bubbleSort (int arr [],int len){
+    int temp; // a temporay value holder for swapping
+
+    for(int i=0; i<len-1; i++){
+        //traverses through the array from the first value
+        for(int j=0; j<len-i-1; j++){
+        //compares the value to next index in the array
+             if(arr[j]>arr[j+1]){
+                //swapping that bubble up the largest values to sorted sectin of the array
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+             }
+        }
+    }
+}//bubble sort
+
+void Sorting (int *arr, int size){
+    int choice;
+
+    printf("1) Selection Sort\n2) Bubble Sort\n3) Exit\n");
+    printf("\nPlease choose: ");
+    scanf("%d", &choice);
+
+    switch(choice){
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+    }
 
 }
 
