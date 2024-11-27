@@ -2,15 +2,14 @@
 GALLEGO, MHARC ALEX D. - BSCS 2A
 
 PROGRAMMING EXERCISE
-DSA PROJECT PROGRESS REPORT: Day 2 - 11/19/2024
+DSA PROJECT PROGRESS REPORT: Day 3 - 11/25/2024
 
 What's new?
-1) Working Linear Data Structure Selection
-- Array Selection working
+1) Working Sorting Selection
+- two Sorting Selection working
 
-2) Array Function
-- working array traverse method
-- working array search method
+- Selction Sort 
+- Bubble Sort
 
 */
 
@@ -37,6 +36,8 @@ int binarySearch(int *arr, int low, int high, int key);
 void Searching(int *arr, int size);
 
 void main (){
+    int arr[MAX]={0};
+    int size;
     int choice;
     int userQuit=0;
 
@@ -72,10 +73,15 @@ void main (){
         
         //Sorting
         case 4: 
+                printf("Let's first create an array\n");
+                printf("What is the size of the array? ");
+                scanf("%d", &size);
 
+                arrMaker(arr, size);//calls to create an array
 
-
-
+                printf("\n\nSORTING ALGORITHM\n"); //header
+                arrPrinter(arr, size);//calls to print the content of the array
+                Sorting(arr, size);
 
                 ///procedure
             break;
@@ -83,8 +89,6 @@ void main (){
 
         //Searching
         case 5: 
-                int arr[MAX]={0};
-                int size;
                 printf("Let's first create an array\n");
                 printf("What is the size of the array? ");
                 scanf("%d", &size);
@@ -264,9 +268,11 @@ void Sorting (int *arr, int size){
     scanf("%d", &choice);
 
     switch(choice){
-        case 1:
+        case 1: selectionSort(arr, size);
+                arrPrinter(arr, size);
             break;
-        case 2:
+        case 2: bubbleSort(arr, size);
+                arrPrinter(arr, size);
             break;
         case 3:
             break;
